@@ -1,4 +1,4 @@
-# APP NAME
+# Firebase Flavor + SNS Authentication
 
 ## Flutter
 

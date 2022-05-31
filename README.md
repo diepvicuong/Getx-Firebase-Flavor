@@ -83,6 +83,6 @@ TWITTER_SCHEME=app_name
 
 Reference: https://pub.dev/packages/twitter_login#twitter-configuration
 
-
-
+### Sign in with apple configuration
+- Reference: https://pub.dev/packages/sign_in_with_apple
 

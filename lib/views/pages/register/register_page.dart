@@ -225,9 +225,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(height: ScreenUtils.resizeHeightUtil(context, 12)),
                 if (Platform.isIOS)
                   ButtonSNS(
-                    iconAsset: 'assets/icons/ic_twitter.png',
+                    iconAsset: 'assets/icons/ic_apple.png',
                     title: 'btnApple'.tr,
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.black,
                     onTap: () {
                       doSignupSNS(method: AuthMethod.Apple);
                     },

@@ -6,9 +6,6 @@ class AppSetting {
   static const int minPickerYear = 1900;
   static const int dialogContentMaxLine = 3;
 
-  // Firestore
-  static const String accountCollection = 'accounts';
-
   // Network
   static const requestTimeout = 10; //seconds
 

@@ -58,6 +58,9 @@ class AuthService {
           await googleUser?.authentication;
 
       // Create a new credential
+      if (googleAuth?.accessToken == null || googleAuth?.idToken == null) {
+        return null;
+      }
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
@@ -116,6 +119,9 @@ class AuthService {
       final authResult = await twitterLogin.login();
 
       // Create a credential from the access token
+      if (authResult.authToken == null || authResult.authTokenSecret == null) {
+        return null;
+      }
       final twitterAuthCredential = TwitterAuthProvider.credential(
         accessToken: authResult.authToken!,
         secret: authResult.authTokenSecret!,

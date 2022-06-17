@@ -46,10 +46,9 @@ Visual Studio Code Configuration defined in `.vscode/launch.json`。
 
 
 ### How to get FACEBOOK_APP_ID & FACEBOOK_CLIENT_TOKEN?
-_Reference: https://facebook.meedu.app/docs/4.x.x/android_
 1. Create Facebook developer account
-2. Create your app info
-3. Retrieve **FACEBOOK_APP_ID & FACEBOOK_CLIENT_TOKEN** like the image below
+2. Create your app info, follow these steps via this tutorial: https://facebook.meedu.app/docs/4.x.x/android_
+3. Retrieve **FACEBOOK_APP_ID & FACEBOOK_CLIENT_TOKEN** to setup into Firebase like the image below
 ![144253037-f1750fbd-62ac-42fb-88a6-2f7ed8113f3e](https://user-images.githubusercontent.com/40752908/170867916-d6bf66e6-844a-40fb-b1e1-e0f9fb348179.png)
 
 ### How to get TWITTER_API_KEY & TWITTER_API_SECRET?
@@ -78,8 +77,8 @@ TWITTER_SCHEME=app_name
 ### Important notes for TWITTER
 - Remember to add these line into twitter portal
 
-1. **firebase-project-id://**
-2. **https://firebase-project-id.firebaseapp.com/__auth/handler**
+1. **[firebase-project-id]://**
+2. **https://[firebase-project-id].firebaseapp.com/__auth/handler**
 
 Reference: https://pub.dev/packages/twitter_login#twitter-configuration
 

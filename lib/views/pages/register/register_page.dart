@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import '../../../config/app_size.dart';
 import '../../../config/theme/app_colors.dart';
 import '../../../utils/screen_utils.dart';
 import '../../../views/pages/register/widgets/button_gradient_widget.dart';
@@ -12,8 +11,6 @@ import 'package:get/get.dart';
 
 import '../../../controllers/login/login_controller.dart';
 import 'widgets/button_sns_widget.dart';
-import 'widgets/dash_divider_widget.dart';
-import '../../../utils/extensions.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -68,8 +65,7 @@ class _RegisterPageState extends State<RegisterPage> {
           key: formKey,
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: ScreenUtils.resizeWidthUtil(
-                    context, AppSize.paddingRegisterPage)),
+                horizontal: ScreenUtils.resizeWidthUtil(context, 30)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -121,8 +117,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       validator: (String? text) {
                         if (text == null || text.isEmpty) {
                           return 'emailRequired'.tr;
-                        } else if (!text.isValidEmail) {
-                          return 'invalidEmail'.tr;
                         }
                         return null;
                       },
@@ -192,7 +186,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                 ),
                 SizedBox(height: ScreenUtils.resizeHeightUtil(context, 36)),
-                const DashDivider(
+                const Divider(
                   color: Color(0xff143966),
                 ),
                 SizedBox(height: ScreenUtils.resizeHeightUtil(context, 36)),

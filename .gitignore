@@ -50,5 +50,5 @@ app.*.map.json
 
 ios/*.lock
 
-/android/app/src/dev/google-services.json
-ios/config/dev/GoogleService-Info.plist
+# /android/app/src/dev/google-services.json
+# ios/config/dev/GoogleService-Info.plist

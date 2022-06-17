@@ -9,7 +9,6 @@ import 'config/app_setting.dart';
 import 'config/theme/app_colors.dart';
 import 'routes/app_pages.dart';
 import 'routes/app_routes.dart';
-import 'services/localization_service.dart';
 
 void main() async {
   //Custom debugPrint
@@ -24,7 +23,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
-  await LocalizationService.initialize();
 
   runZonedGuarded(() {
     runApp(MyApp());
@@ -43,13 +41,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: AppColor.backgroundColor),
-      locale: LocalizationService.locale,
-      fallbackLocale: LocalizationService.fallbackLocale,
-      translations: LocalizationService(),
       initialRoute: Routes.REGISTER_PAGE,
       getPages: AppPages.pages,
-      // initialBinding: MainBinding(),
-      // supportedLocales: LocalizationService.locales,
     );
   }
 }
